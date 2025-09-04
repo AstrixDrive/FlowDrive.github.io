@@ -54,21 +54,21 @@
                 <div class="column has-text-centered">
                     <h1 class="title is-4 publication-title">OpenDriveVLA: Towards End-to-end Autonomous Driving <br> with Large Vision Language Action Model</h1>
                     <div class="is-size-5 publication-authors">
-                        <span class="author-block" style="margin-right: 15px;"><a href="https://scholar.google.com/citations?user=FPYXLpQAAAAJ&hl=en"
-                                                          target="_blank">Xingcheng Zhou</a><sup>1*</sup>,</span>
-                        <span class="author-block" style="margin-right: 15px;"><a href="https://scholar.google.com/citations?hl=en&user=LQPhI6AAAAAJ"
-                                                      target="_blank">Xuyuan Han</a><sup>1</sup>,</span>
-                        <span class="author-block" style="margin-right: 15px;"><a href="https://www.linkedin.com/in/feng-yang-tum/"
-                                                      target="_blank">Feng Yang</a><sup>1</sup>,</span>
-                        <span class="author-block" style="margin-right: 15px;"><a href="https://scholar.google.com/citations?user=fj5DzgcAAAAJ&hl=en" target="_blank">Yunpu Ma </a><sup>2</sup>,</span>
-                        <span class="author-block"><a
-                                href="https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll"
-                                target="_blank">Alois C. Knoll</a><sup>1</sup></span>
+                        <span class="author-block" style="margin-right: 15px;"><a href="FIRST AUTHIR PERSONAL LINK"
+                                                        target="_blank">First Author</a><sup>1*</sup>,</span>
+                        <span class="author-block" style="margin-right: 15px;"><a href="AUTHIR PERSONAL LINK"
+                                                        target="_blank">>Second Author</a><sup>1</sup>,</span>
+                        <span class="author-block" style="margin-right: 15px;"><a href="AUTHIR PERSONAL LINK"
+                                                        target="_blank">>Third Author</a><sup>1</sup>,</span>
+                        <span class="author-block" style="margin-right: 15px;"><a href="AUTHIR PERSONAL LINK" 
+                                                        target="_blank">Fourth Author </a><sup>2</sup>,</span>
+                        <span class="author-block"><a href="AUTHIR PERSONAL LINK"
+                                                        target="_blank">>Fifth Author</a><sup>1</sup></span>
                     </div>
 
                     <div class="is-size-5 publication-authors">
-                        <span class="author-block" style="margin-right: 5px;"><sup>1</sup>Technical University of Munich</span>
-                        <span class="author-block"><br><sup>2</sup>Ludwig Maximilian University of Munich</span>
+                        <span class="author-block" style="margin-right: 5px;"><sup>1</sup>Shanghai Jiao Tong University</span>
+                        <!-- <span class="author-block"><br><sup>2</sup>Ludwig Maximilian University of Munich</span> -->
                         <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
                     </div>
 
@@ -77,7 +77,7 @@
 
                             <!-- Github link -->
                             <span class="link-block">
-                                    <a href="https://github.com/DriveVLA/OpenDriveVLA" target="_blank"
+                                    <a href="https://github.com/{}/FlowDrive" target="_blank"
                                        class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
@@ -88,7 +88,7 @@
 
                             <!-- Arxiv link -->
                             <span class="link-block">
-                                    <a href="https://arxiv.org/abs/2503.23463"
+                                    <a href="https://arxiv.org/abs/{}"
                                         target="_blank" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
@@ -98,7 +98,7 @@
                                 </span>
 
                             <!-- Dataset link -->
-                            <span class="link-block">
+                            <!-- <span class="link-block">
                                     <a href=""
                                        target="_blank" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
@@ -106,7 +106,7 @@
                                         </span>
                                         <span>Dataset</span>
                                     </a>
-                                </span>
+                                </span> -->
 
                         </div>
                     </div>
@@ -165,8 +165,8 @@
     <div class="container is-max-desktop">
         <div class="hero-body">
             <div class="item">
-                <h2 class="title is-3" style="text-align: center;">OpenDriveVLA Model Architecture</h2>
-                <img src="static/images/drivevla-ModelArc.jpg" alt="DriveVLA Model Architecture"/>
+                <h2 class="title is-3" style="text-align: center;">FlowDrive Model Architecture</h2>
+                <img src="static/images/framework.png" alt="FlowDrive Model Architecture"/>
                 <h2 class="subtitle">
                     <!-- <b>Visualization of the labeled Accid3nD dataset</b>. -->
                 </h2>
@@ -183,7 +183,7 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        We present OpenDriveVLA, a Vision-Language Action (VLA) model designed for end-to-end autonomous driving. OpenDriveVLA builds upon open-source pre-trained large Vision-Language Models (VLMs) to generate reliable open-loop driving actions, conditioned on 3D environmental perception, ego vehicle states, and driver commands. To bridge the modality gap between driving visual representations and language embeddings, we propose a hierarchical vision-language alignment process, projecting both 2D and 3D structured visual tokens into a unified semantic space. Besides, OpenDriveVLA models the dynamic relationships between the ego vehicle, surrounding agents, and static road elements through an autoregressive agent-env-ego interaction process, ensuring both spatially and behaviorally informed trajectory planning. Extensive experiments on the nuScenes dataset demonstrate that OpenDriveVLA achieves state-of-the-art results across open-loop trajectory planning and driving-related question-answering tasks. Qualitative analyses further illustrate OpenDriveVLA's superior capability to follow high-level driving commands and robustly generate trajectories under challenging scenarios, highlighting its potential for next-generation end-to-end autonomous driving. We will release our code to facilitate further research in this domain.
+                        Recent advances in end-to-end autonomous driving leverage multi-view images to construct bird’s-eye-view (BEV) representations for environment understanding and motion prediction. While BEV features offer a compact and holistic encoding of the driving scene, they inherently lack explicit modeling of risk and guidance priors for safe and interpretable planning. In addition, existing frameworks often tightly couple motion pattern prediction with trajectory generation within the planning module, limiting flexibility and undermining the system's ability to generalize across diverse driving scenarios. To address these challenges, we propose FlowDrive, a novel motion-decoupled end-to-end driving framework based on flow field modeling. FlowDrive introduces risk potential fields and lane attraction fields, to construct continuous and physically interpretable motion flow fields that represent both dynamic and static elements in the environment. These flow-based representations augment BEV features with fine-grained safety-aware guidance, enabling more robust and rational trajectory planning. Furthermore, we incorporate an adaptive anchor refinement mechanism, which dynamically dynamically adjusts trajectory anchors to evolving scene context, improving planning precision and responsiveness. Furthermore, FlowDrive decouples motion-mode prediction from trajectory generation, enhancing planning interpretability and flexibility. Extensive experiments conducted on the NAVSIM v2 autonomous driving benchmark demonstrate that FlowDrive achieves state-of-the-art performance, reaching an EPDMS score of 86.1, significantly outperforming other baselines.
                     </p>
                 </div>
             </div>
@@ -192,19 +192,19 @@
 </section>
 
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body">
             <div class="item">
                 <h2 class="title is-3" style="text-align: center;">OpenDriveVLA Training Pipeline</h2>
                 <img src="static/images/drivevla_training.jpg" alt="DriveVLA Training Pipleline"/>
-                <h2 class="subtitle">
+                <h2 class="subtitle"> -->
                     <!-- <b>Visualization of the labeled Accid3nD dataset</b>. -->
-                </h2>
+                <!-- </h2>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <section class="hero teaser">
@@ -214,14 +214,14 @@
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <div class="item">
-                        <h3 class="title is-4" style="text-align: center;">Open-Loop Planning Performance</h3>
+                        <h3 class="title is-4" style="text-align: center;">Quantitative Results</h3>
                         <div style="text-align: center;">
-                            <img src="static/images/main_result.png" alt="Open-Loop planning performance" style="margin: 0 auto;"/>
+                            <img src="static/images/quantitative_results.png" alt="Open-Loop planning performance" style="margin: 0 auto;"/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="columns is-centered">
+            <!-- <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <div class="item">
                         <h3 class="title is-4" style="text-align: center;">Question Answering Performance</h3>
@@ -230,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -241,7 +241,7 @@
             <div class="column is-8">
                 <div class="content has-text-centered">
                     <p>
-                        The <strong>OpenDriveVLA</strong> is licensed under <a
+                        This <strong>Website</strong> is licensed under <a
                             href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA
                         4.0</a>.
                     </p>
