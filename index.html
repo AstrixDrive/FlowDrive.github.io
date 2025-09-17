@@ -132,7 +132,7 @@
 
 
 <section class="hero teaser">
-    <div class="container is-fluid">
+    <div class="container is-max-widescreen">
         <div class="hero-body">
             <h2 class="title is-3" style="text-align: center;">Visualizations</h2>
 
@@ -232,8 +232,8 @@
 
 
 <section class="section hero" style="margin-top: -20px;">
-    <!-- <div class="container is-max-desktop"> -->
-    <div class="container is-fluid">
+    <div class="container is-max-widescreen">
+    <!-- <div class="container is-fluid"> -->
         <div class="hero-body">
             <div class="item">
                 <h2 class="title is-3" style="text-align: center;">FlowDrive Model Architecture</h2>
@@ -248,13 +248,13 @@
 
 
 <section class="section hero" style="margin-top: -20px;">
-    <div class="container is-fluid">
+    <div class="container is-max-widescreen">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Recent advances in end-to-end autonomous driving leverage multi-view images to construct bird’s-eye-view (BEV) representations for environment understanding and motion prediction. While BEV features offer a compact and holistic encoding of the driving scene, they inherently lack explicit modeling of risk and guidance priors for safe and interpretable planning. In addition, existing frameworks often tightly couple motion pattern prediction with trajectory generation within the planning module, limiting flexibility and undermining the system's ability to generalize across diverse driving scenarios. To address these challenges, we propose FlowDrive, a novel motion-decoupled end-to-end driving framework based on flow field modeling. FlowDrive introduces risk potential fields and lane attraction fields, to construct continuous and physically interpretable motion flow fields that represent both dynamic and static elements in the environment. These flow-based representations augment BEV features with fine-grained safety-aware guidance, enabling more robust and rational trajectory planning. Furthermore, we incorporate an adaptive anchor refinement mechanism, which dynamically dynamically adjusts trajectory anchors to evolving scene context, improving planning precision and responsiveness. Furthermore, FlowDrive decouples motion-mode prediction from trajectory generation, enhancing planning interpretability and flexibility. Extensive experiments conducted on the NAVSIM v2 autonomous driving benchmark demonstrate that FlowDrive achieves state-of-the-art performance, reaching an EPDMS score of 86.1, significantly outperforming other baselines.
+                        Recent advances in end-to-end autonomous driving leverage multi-view images to construct BEV representations for motion planning. In motion planning, autonomous vehicles need considering both hard constraints imposed by geometrically occupied obstacles (e.g., vehicles,  pedestrians) and soft, rule-based semantics with no explicit geometry (e.g., lane boundaries, traffic priors).  However, existing end-to-end frameworks typically rely on BEV features learned in an implicit manner, lacking explicit modeling of risk and guidance priors for safe and interpretable planning. To address this, we propose \textbf{FlowDrive}, a novel framework that introduces physically interpretable energy-based flow fields—including risk potential and lane attraction fields—to encode semantic priors and safety cues into the BEV space. These flow-aware features enable adaptive refinement of anchor trajectories and serve as interpretable guidance for trajectory generation. Moreover, FlowDrive decouples motion intent prediction from trajectory denoising via a conditional diffusion planner with feature-level gating, alleviating task interference and enhancing multimodal diversity. Experiments on the NAVSIM v2 benchmark demonstrate that FlowDrive achieves state-of-the-art performance with an EPDMS of 86.3, surpassing prior baselines in both safety and planning quality.
                     </p>
                 </div>
             </div>
@@ -267,13 +267,13 @@
 
 
 <section class="hero teaser">
-    <div class="container is-fluid">
+    <div class="container is-max-widescreen">
         <div class="hero-body">
             <h2 class="title is-3" style="text-align: center;">Experimental Results</h2>
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <div class="item">
-                        <h3 class="title is-4" style="text-align: center;">Quantitative Results</h3>
+                        <!-- <h3 class="title is-4" style="text-align: center;">Quantitative Results</h3> -->
                         <div style="text-align: center;">
                             <img src="static/images/quantitative_results.png" alt="Open-Loop planning performance" style="margin: 0 auto;"/>
                         </div>
